@@ -1,4 +1,4 @@
-# Data Sheets
+# [04-12-25] Proteomics Data
 
 <div style={{backgroundColor: '#f8f9fa', padding: '10px 0 0 0', borderBottom: '1px solid #e5e7eb', marginBottom: '15px', fontFamily: 'Segoe UI, Arial, sans-serif', boxShadow: '0 1px 3px rgba(0,0,0,0.05)'}}>
   <div style={{backgroundColor: '#107c41', color: 'white', padding: '8px 16px', display: 'flex', alignItems: 'center', fontSize: '13px'}}>
@@ -68,39 +68,39 @@
     </div>
   </div>
   <div style={{display: 'flex', backgroundColor: 'white', padding: '6px 0', borderBottom: '1px solid #e5e7eb'}}>
-    <div style={{border: '1px solid #e5e7eb', width: '60px', textAlign: 'center', padding: '4px', marginLeft: '12px', fontSize: '13px', borderRadius: '3px', color: '#444'}}>D14</div>
+    <div style={{border: '1px solid #e5e7eb', width: '60px', textAlign: 'center', padding: '4px', marginLeft: '12px', fontSize: '13px', borderRadius: '3px', color: '#444'}}>F14</div>
     <div style={{border: '1px solid #e5e7eb', width: 'calc(100% - 100px)', padding: '4px 10px', marginLeft: '12px', fontSize: '13px', fontFamily: 'Consolas, monospace', borderRadius: '3px', color: '#107c41'}}>
-      =AVERAGE(D2:D13)
+      =AVERAGE(F2:F13)
     </div>
   </div>
 </div>
 
 | | A | B | C | D | E | F | G | H | I | J |
 |---|---|---|---|---|---|---|---|---|---|---|
-| 1 | **Cell Line** | **Cancer Type** | **Control** | **Drug A** | **Drug B** | **Drug C** | **Drug A+B** | **Drug A+C** | **Drug B+C** | **Triple Therapy** |
-| 2 | MCF-7 | Breast | 100.0 | 78.3 | 65.2 | 83.1 | 45.7 | 62.4 | 55.9 | 32.8 |
-| 3 | MDA-MB-231 | Breast | 100.0 | 85.7 | 72.1 | 79.8 | 59.2 | 67.5 | 63.4 | 41.2 |
-| 4 | PC-3 | Prostate | 100.0 | 82.3 | 68.5 | 75.2 | 52.1 | 60.3 | 58.7 | 38.5 |
-| 5 | DU145 | Prostate | 100.0 | 79.8 | 74.2 | 81.5 | 58.7 | 65.2 | 61.9 | 43.7 |
-| 6 | A549 | Lung | 100.0 | 68.5 | 59.3 | 72.4 | 38.2 | 52.1 | 45.8 | 29.2 |
-| 7 | H460 | Lung | 100.0 | 72.1 | 63.8 | 79.5 | 42.5 | 58.7 | 49.2 | 32.5 |
-| 8 | HCT116 | Colorectal | 100.0 | 75.8 | 70.2 | 68.3 | 54.7 | 51.9 | 48.3 | 35.2 |
-| 9 | HT-29 | Colorectal | 100.0 | 81.2 | 75.3 | 72.8 | 61.5 | 57.2 | 53.8 | 40.1 |
-| 10 | PANC-1 | Pancreatic | 100.0 | 92.5 | 88.7 | 90.3 | 79.5 | 82.1 | 80.3 | 68.4 |
-| 11 | BxPC-3 | Pancreatic | 100.0 | 87.3 | 85.2 | 88.9 | 75.8 | 78.2 | 76.5 | 64.9 |
-| 12 | U87MG | Glioblastoma | 100.0 | 76.2 | 69.8 | 74.5 | 55.3 | 57.8 | 52.4 | 41.5 |
-| 13 | T98G | Glioblastoma | 100.0 | 83.5 | 75.7 | 81.2 | 62.8 | 68.3 | 60.5 | 49.7 |
-| 14 | **Average** | **-** | **100.0** | **80.3** | **72.3** | **79.0** | **57.2** | **63.5** | **58.9** | **43.1** |
+| 1 | **Protein ID** | **Protein Name** | **Gene** | **Sample A** | **Sample B** | **Sample C** | **Log2 FC** | **p-value** | **q-value** | **Significant** |
+| 2 | P01308 | Insulin | INS | 4532.1 | 5621.3 | 4912.7 | 0.38 | 0.0021 | 0.0102 | Yes |
+| 3 | P01857 | Immunoglobulin G | IGHG1 | 18542.6 | 17895.4 | 17623.9 | -0.11 | 0.2438 | 0.3871 | No |
+| 4 | P02768 | Serum albumin | ALB | 42531.8 | 43256.9 | 42861.3 | 0.03 | 0.4572 | 0.6138 | No |
+| 5 | P04637 | Cellular tumor antigen p53 | TP53 | 842.3 | 1453.7 | 2145.2 | 1.35 | 0.0002 | 0.0018 | Yes |
+| 6 | P05231 | Interleukin-6 | IL6 | 124.5 | 432.7 | 538.2 | 2.11 | 0.0001 | 0.0012 | Yes |
+| 7 | P07900 | Heat shock protein HSP 90-alpha | HSP90AA1 | 5231.4 | 5143.2 | 5187.6 | -0.02 | 0.7634 | 0.8526 | No |
+| 8 | P08684 | Cytochrome P450 3A4 | CYP3A4 | 652.4 | 345.6 | 287.3 | -1.18 | 0.0013 | 0.0087 | Yes |
+| 9 | P14780 | Matrix metalloproteinase-9 | MMP9 | 247.6 | 753.2 | 892.1 | 1.85 | 0.0003 | 0.0024 | Yes |
+| 10 | P35354 | Prostaglandin G/H synthase 2 | PTGS2 | 187.3 | 421.5 | 496.8 | 1.41 | 0.0008 | 0.0056 | Yes |
+| 11 | P42224 | Signal transducer and activator | STAT1 | 2143.5 | 3214.7 | 3542.1 | 0.72 | 0.0046 | 0.0189 | Yes |
+| 12 | Q16539 | Mitogen-activated protein kinase | MAPK14 | 1247.6 | 1198.3 | 1253.4 | 0.01 | 0.8912 | 0.9345 | No |
+| 13 | P01106 | Myc proto-oncogene protein | MYC | 324.5 | 784.3 | 821.6 | 1.34 | 0.0011 | 0.0076 | Yes |
+| 14 | **Average** | **-** | **-** | **6384.0** | **6710.1** | **6713.5** | **0.70** | **0.2063** | **0.2537** | **-** |
 
 <div style={{display: 'flex', backgroundColor: '#f8f9fa', borderTop: '1px solid #e5e7eb', padding: '6px 0', marginTop: '15px', fontFamily: 'Segoe UI, Arial, sans-serif'}}>
   <div style={{backgroundColor: '#107c41', color: 'white', padding: '4px 15px', marginLeft: '8px', borderRadius: '3px 3px 0 0', fontSize: '12px'}}>
-    Sheet1
+    Sample_Dataset
   </div>
   <div style={{backgroundColor: '#e5e7eb', color: '#666', padding: '4px 15px', marginLeft: '3px', borderRadius: '3px 3px 0 0', fontSize: '12px'}}>
-    Sheet2
+    Pathway_Analysis
   </div>
   <div style={{backgroundColor: '#e5e7eb', color: '#666', padding: '4px 15px', marginLeft: '3px', borderRadius: '3px 3px 0 0', fontSize: '12px'}}>
-    Sheet3
+    Volcano_Plot
   </div>
   <div style={{flex: 1}}></div>
   <div style={{display: 'flex', alignItems: 'center', marginRight: '16px', fontSize: '12px', color: '#666'}}>
@@ -108,4 +108,4 @@
     <div style={{border: '1px solid #e5e7eb', backgroundColor: 'white', padding: '2px 6px', borderRadius: '3px'}}>-</div>
     <div style={{border: '1px solid #e5e7eb', backgroundColor: 'white', padding: '2px 6px', marginLeft: '3px', borderRadius: '3px'}}>+</div>
   </div>
-</div>
+</div> 

@@ -1,0 +1,129 @@
+/* Custom styles for Nextra docs */
+
+/* Target the sidebar */
+.nextra-sidebar-container,
+.nextra-sidebar,
+nav.nextra-sidebar-container,
+aside.nextra-sidebar-container,
+.nextra-sidebar-container div,
+aside[class*="nx-w-64"],
+.nx-w-64 {
+  background-color: #F4F6F9 !important;
+  padding-left: 0 !important;
+  margin-left: 0 !important;
+}
+
+/* Make sure the background color works in both light and dark modes */
+.dark .nextra-sidebar-container,
+.dark .nextra-sidebar,
+.dark nav.nextra-sidebar-container,
+.dark aside.nextra-sidebar-container,
+.dark .nextra-sidebar-container div,
+.dark aside[class*="nx-w-64"],
+.dark .nx-w-64 {
+  background-color: #F4F6F9 !important;
+  padding-left: 0 !important;
+  margin-left: 0 !important;
+}
+
+/* Remove padding from main container */
+.nextra-nav-container,
+.nextra-nav-container nav,
+main,
+header,
+.nextra-container,
+div[class*="nx-max-w-"] {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  max-width: 100% !important;
+}
+
+/* Adjust logo to be at the edge */
+.nextra-nav-container .nx-px-2,
+.nextra-nav-container .nx-px-3,
+.nextra-nav-container .nx-px-4 {
+  padding-left: 0 !important;
+}
+
+/* Make the sidebar and main content touch the edges */
+.nextra-container {
+  gap: 0 !important;
+} 
+
+/* Move search bar to middle of header */
+.nextra-nav-container nav {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  position: relative !important;
+}
+
+.nextra-nav-container nav > div:nth-child(2),
+.nextra-search,
+div[class*="nextra-search"] {
+  position: absolute !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  margin: 0 !important;
+  width: 300px !important;
+  max-width: 300px !important;
+}
+
+/* Style the search input */
+.nextra-search input,
+div[class*="nextra-search"] input {
+  width: 100% !important;
+  background-color: #F4F6F9 !important;
+  border: 1px solid #E8EBEF !important;
+  border-radius: 6px !important;
+}
+
+/* Fix z-index for search dropdown to appear above content */
+.nextra-search div[role="combobox"],
+div[class*="nextra-search"] div[role="combobox"] {
+  z-index: 100 !important;
+}
+
+/* Custom styles for the TOC terminal sidebar */
+.nextra-toc {
+  display: none !important; /* Hide the TOC completely */
+}
+
+/* Allow the main content to extend to full width */
+main > div,
+main > div > article,
+main > article,
+div[class*="nx-w-full"] article,
+.nextra-content article,
+article.nx-prose {
+  width: 100% !important;
+  max-width: 100% !important;
+}
+
+/* Hide default Nextra TOC items */
+.nextra-toc ul, .nextra-toc h4, .nextra-toc .nextra-scrollbar {
+  display: none !important;
+}
+
+/* Make sure the right side of navbar retains position */
+.nextra-nav-container nav > div:last-child {
+  position: relative !important;
+  z-index: 50 !important;
+  margin-left: auto !important;
+}
+
+/* Adjust the logo position to ensure it's visible */
+.nextra-nav-container nav > div:first-child {
+  position: relative !important;
+  z-index: 50 !important;
+}
+
+/* Hide GitHub and Discord buttons */
+.nextra-nav-container a[href*="github.com"],
+.nextra-nav-container a[href*="discord.com"],
+.nextra-nav-container a[href*="example.com"],
+.nextra-nav-container [data-navbar-button] {
+  display: none !important;
+} 
