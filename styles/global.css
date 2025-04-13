@@ -67,8 +67,8 @@ div[class*="nextra-search"] {
   left: 50% !important;
   transform: translateX(-50%) !important;
   margin: 0 !important;
-  width: 300px !important;
-  max-width: 300px !important;
+  width: 400px !important;
+  max-width: 400px !important;
 }
 
 /* Style the search input */
@@ -78,6 +78,16 @@ div[class*="nextra-search"] input {
   background-color: #F4F6F9 !important;
   border: 1px solid #E8EBEF !important;
   border-radius: 6px !important;
+  padding: 8px 16px !important;
+  text-indent: 8px !important;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease !important;
+}
+
+.nextra-search input:focus,
+div[class*="nextra-search"] input:focus {
+  border-color: #D4D6FF !important;
+  box-shadow: 0 0 0 2px #D4D6FF !important;
+  outline: none !important;
 }
 
 /* Fix z-index for search dropdown to appear above content */
@@ -100,6 +110,34 @@ div[class*="nx-w-full"] article,
 article.nx-prose {
   width: 100% !important;
   max-width: 100% !important;
+}
+
+/* Add left margin to article content to prevent it from touching the sidebar */
+main > div > article > *:not(.excel-header):not(.excel-formula):not(.excel-columns),
+main > article > *:not(.excel-header):not(.excel-formula):not(.excel-columns),
+.nextra-content article > *:not(.excel-header):not(.excel-formula):not(.excel-columns),
+article.nx-prose > *:not(.excel-header):not(.excel-formula):not(.excel-columns),
+.nextra-content > div > main > div > article > *:not(.excel-header):not(.excel-formula):not(.excel-columns),
+.nextra-content > article.nx-prose > *:not(.excel-header):not(.excel-formula):not(.excel-columns) {
+  margin-left: 24px !important;
+}
+
+/* Add margin to code blocks and pre elements */
+.nextra-content pre,
+article.nx-prose pre,
+.nx-prose pre,
+.nextra-content .nx-block,
+article.nx-prose .nx-block {
+  margin-left: 24px !important;
+  margin-right: 24px !important;
+}
+
+/* Make headings also have left margin */
+.nextra-content h1, .nextra-content h2, .nextra-content h3, 
+.nextra-content h4, .nextra-content h5, .nextra-content h6,
+article.nx-prose h1, article.nx-prose h2, article.nx-prose h3, 
+article.nx-prose h4, article.nx-prose h5, article.nx-prose h6 {
+  margin-left: 24px !important;
 }
 
 /* Hide default Nextra TOC items */

@@ -3,7 +3,21 @@ import React, { useState } from 'react'
 const TerminalSidebar = () => {
   const [messages, setMessages] = useState([
     { type: 'system', content: '> Terminal initialized' },
-    { type: 'system', content: '> AI assistant ready' }
+    { type: 'system', content: '> <span style="color: #FF8C00;">code</span>' },
+    { type: 'system', content: `● I'll help you explore the codebase. Let me
+  first check what files we have to understand
+  what code is available.
+
+● <span style="color: #FF8C00;">Call</span>(<span style="color: #FF8C00;">Examine</span> code files)…
+  └─ <span style="color: #FF8C00;">Read</span>(paid_user_metrics_visualization.py)…
+  └─ <span style="color: #FF8C00;">Read</span>(visualizations/gender_visualization.py)…
+  └─ <span style="color: #FF8C00;">Read</span>(visualizations/new_gender_age_visualization.py)…
+  └─ <span style="color: #FF8C00;">Done</span> (3 tool uses · 0s)
+
+● Would you like me to explain these
+  visualization scripts or help you create a new
+  visualization? I can also help you check the
+  data files.` }
   ]);
   const [input, setInput] = useState('');
   const [minimized, setMinimized] = useState(true);
@@ -13,14 +27,21 @@ const TerminalSidebar = () => {
     e.preventDefault();
     if (!input.trim()) return;
 
-    // Add user message
-    setMessages([...messages, { type: 'user', content: input }]);
+    // Add user input as terminal command
+    setMessages([...messages, { type: 'system', content: `> <span style="color: #FF8C00;">${input}</span>` }]);
     
-    // Simulate AI response (you can replace this with actual API call)
+    // Simulate AI response in terminal format
     setTimeout(() => {
       setMessages(prev => [...prev, { 
-        type: 'ai', 
-        content: `I received: "${input}". How can I help with your documentation?` 
+        type: 'system', 
+        content: `● I'll analyze your request to ${input}
+
+● <span style="color: #FF8C00;">Call</span>(<span style="color: #FF8C00;">Search</span> relevant files)…
+  └─ <span style="color: #FF8C00;">Read</span>(data_processing/analyze.py)…
+  └─ <span style="color: #FF8C00;">Done</span> (1 tool use · 0s)
+
+● I found the relevant code. Would you like me to explain
+  how it works or suggest improvements?` 
       }]);
     }, 500);
 
@@ -34,7 +55,7 @@ const TerminalSidebar = () => {
   return (
     <div className={`terminal-popup ${minimized ? 'minimized' : ''}`}>
       <div className="terminal-header">
-        <div className="terminal-title">Code Agent</div>
+        <div className="terminal-title">Code Terminal</div>
         <div className="terminal-controls">
           <button onClick={toggleMinimize} className="minimize-button">
             {minimized ? '↗' : '↘'}
@@ -46,18 +67,8 @@ const TerminalSidebar = () => {
         <>
           <div className="terminal-body">
             {messages.map((msg, i) => (
-              <div key={i} className={`terminal-message ${msg.type}`}>
-                {msg.type === 'system' ? (
-                  <span>{msg.content}</span>
-                ) : msg.type === 'user' ? (
-                  <div className="message-bubble user-bubble">
-                    <span>{msg.content}</span>
-                  </div>
-                ) : (
-                  <div className="message-bubble ai-bubble">
-                    <span>{msg.content}</span>
-                  </div>
-                )}
+              <div key={i} className="terminal-message system">
+                <span className="terminal-text" dangerouslySetInnerHTML={{ __html: msg.content }}></span>
               </div>
             ))}
           </div>
@@ -68,7 +79,7 @@ const TerminalSidebar = () => {
               value={input}
               onChange={(e) => setInput(e.target.value)}
               className="terminal-input"
-              placeholder="Ask me something..."
+              placeholder="Enter a command..."
             />
             <button type="submit" className="send-button">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -115,9 +126,10 @@ const TerminalSidebar = () => {
           justify-content: space-between;
           align-items: center;
           background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+          color: #212529;
           padding: 12px 16px;
           border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-          border-radius: 16px;
+          border-radius: 16px 16px 0 0;
           cursor: pointer;
         }
         
@@ -125,6 +137,7 @@ const TerminalSidebar = () => {
           box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
           border: 1px solid rgba(0, 0, 0, 0.05);
           min-width: 140px;
+          border-radius: 16px;
         }
         
         .terminal-title {
@@ -162,44 +175,30 @@ const TerminalSidebar = () => {
           overflow-y: auto;
           display: flex;
           flex-direction: column;
-          gap: 12px;
+          gap: 4px;
           background-color: #f8f9fa;
+          color: #000000;
+          font-family: 'Menlo', 'Monaco', 'Courier New', monospace;
           max-height: none; /* Remove max-height limitation */
         }
         
         .terminal-message {
           font-size: 14px;
-          line-height: 1.5;
+          line-height: 1.4;
+          white-space: pre-wrap;
           word-break: break-word;
         }
         
         .terminal-message.system {
-          color: #6c757d;
-          font-style: italic;
+          color: #000000;
           font-size: 13px;
-          margin-bottom: 8px;
         }
 
-        .message-bubble {
-          padding: 10px 14px;
-          border-radius: 18px;
-          max-width: 85%;
-          display: inline-block;
+        .terminal-text {
+          display: block;
+          padding: 4px 0;
         }
-        
-        .user-bubble {
-          background-color: #e9ecef;
-          color: #212529;
-          border-top-right-radius: 4px;
-          margin-left: auto;
-        }
-        
-        .ai-bubble {
-          background: linear-gradient(135deg, #4f46e5, #7c3aed);
-          color: white;
-          border-top-left-radius: 4px;
-        }
-        
+
         .terminal-input-container {
           display: flex;
           align-items: center;
@@ -212,18 +211,20 @@ const TerminalSidebar = () => {
         .terminal-input {
           flex: 1;
           background-color: #f1f3f5;
-          border: none;
-          color: #333;
-          font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+          border: 1px solid #e5e7eb;
+          color: #000000;
+          font-family: 'Menlo', 'Monaco', 'Courier New', monospace;
           font-size: 14px;
           outline: none;
           padding: 10px 16px;
-          border-radius: 24px;
+          border-radius: 8px;
           transition: all 0.2s ease;
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.03);
         }
         
         .terminal-input:focus {
-          box-shadow: 0 0 0 2px rgba(79, 70, 229, 0.3);
+          border-color: #6D77FF;
+          box-shadow: 0 0 0 2px #D4D6FF;
           background-color: white;
         }
         
@@ -232,22 +233,24 @@ const TerminalSidebar = () => {
         }
 
         .send-button {
-          background: linear-gradient(135deg, #4f46e5, #7c3aed);
+          background-color: #6D77FF;
           color: white;
           border: none;
           height: 38px;
           width: 38px;
-          border-radius: 50%;
+          border-radius: 8px;
           display: flex;
           align-items: center;
           justify-content: center;
           cursor: pointer;
           transition: all 0.2s ease;
+          box-shadow: 0 2px 4px rgba(109, 119, 255, 0.2);
         }
 
         .send-button:hover {
-          transform: scale(1.05);
-          box-shadow: 0 2px 8px rgba(79, 70, 229, 0.4);
+          background-color: #5B66FF;
+          box-shadow: 0 4px 8px rgba(109, 119, 255, 0.3);
+          transform: translateY(-1px);
         }
       `}</style>
     </div>

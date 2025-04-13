@@ -1,111 +1,570 @@
-# Data Sheets
+---
+title: "Welcome"
+breadcrumb: false
+showBreadcrumb: false
+hideBreadcrumb: true
+---
 
-<div style={{backgroundColor: '#f8f9fa', padding: '10px 0 0 0', borderBottom: '1px solid #e5e7eb', marginBottom: '15px', fontFamily: 'Segoe UI, Arial, sans-serif', boxShadow: '0 1px 3px rgba(0,0,0,0.05)'}}>
-  <div style={{backgroundColor: '#107c41', color: 'white', padding: '8px 16px', display: 'flex', alignItems: 'center', fontSize: '13px'}}>
-    <div style={{display: 'flex', gap: '15px'}}>
-      <div>File</div>
-      <div style={{borderBottom: '2px solid white', paddingBottom: '6px'}}>Home</div>
-      <div>Insert</div>
-      <div>Page Layout</div>
-      <div>Formulas</div>
-      <div>Data</div>
-      <div>Review</div>
-      <div>View</div>
-    </div>
-  </div>
-  <div style={{display: 'flex', backgroundColor: '#f8f9fa', padding: '8px 12px', borderBottom: '1px solid #e5e7eb', fontSize: '12px', alignItems: 'center'}}>
-    <div style={{display: 'flex', alignItems: 'center', marginRight: '16px'}}>
-      <div style={{border: '1px solid #e5e7eb', padding: '5px 8px', marginRight: '6px', backgroundColor: 'white', borderRadius: '3px', color: '#666'}} title="Undo">↩</div>
-      <div style={{border: '1px solid #e5e7eb', padding: '5px 8px', backgroundColor: 'white', borderRadius: '3px', color: '#666'}} title="Redo">↪</div>
-    </div>
-    <div style={{border: '1px solid #e5e7eb', padding: '5px 8px', marginRight: '16px', backgroundColor: 'white', borderRadius: '3px', color: '#666'}} title="Paint Format">🖌️</div>
-    <div style={{display: 'flex', alignItems: 'center', marginRight: '16px'}}>
-      <div style={{border: '1px solid #e5e7eb', padding: '5px 8px', marginRight: '1px', backgroundColor: 'white', borderRadius: '3px 0 0 3px', color: '#666'}} title="Currency Format">¥</div>
-      <div style={{border: '1px solid #e5e7eb', padding: '5px 8px', marginRight: '1px', backgroundColor: 'white', color: '#666'}} title="Percent Format">%</div>
-      <div style={{border: '1px solid #e5e7eb', padding: '5px 8px', marginRight: '1px', backgroundColor: 'white', color: '#666'}} title="Increase Decimal">.0</div>
-      <div style={{border: '1px solid #e5e7eb', padding: '5px 8px', backgroundColor: 'white', borderRadius: '0 3px 3px 0', color: '#666'}} title="Decrease Decimal">.00</div>
-    </div>
-    <div style={{display: 'flex', alignItems: 'center', marginRight: '16px'}}>
-      <div style={{border: '1px solid #e5e7eb', padding: '5px 10px', marginRight: '4px', backgroundColor: 'white', borderRadius: '3px', color: '#666', display: 'flex', alignItems: 'center', gap: '5px'}} title="Font">
-        <span>Arial</span>
-        <span style={{fontSize: '10px'}}>▼</span>
-      </div>
-      <div style={{border: '1px solid #e5e7eb', padding: '5px 8px', backgroundColor: 'white', borderRadius: '3px', color: '#666', display: 'flex', alignItems: 'center', gap: '3px'}} title="Font Size">
-        <span>11</span>
-        <span style={{fontSize: '10px'}}>▼</span>
+import ExcelLogo from '../components/excel.png'
+import IllustratorLogo from '../components/illustrator.png'
+import GithubLogo from '../components/github.png'
+import VSCodeLogo from '../components/vscode.png'
+import FigureShopLogo from '../components/figure_shop.png'
+
+<div className="integration-diagram">
+  <div className="container">
+    <div className="text-content">
+      <h2 className="heading">Your entire data analysis and visualization pipeline in one place.</h2>
+      <p className="subtitle">Experience how an AI agent can help you apply any publically available computational analysis method to your data and create publication-quality figures.</p>
+      <div className="buttons-container">
+        <button className="action-button waitlist-button">Waitlist</button>
+        <button className="action-button contact-button">Contact</button>
       </div>
     </div>
-    <div style={{display: 'flex', alignItems: 'center', marginRight: '16px'}}>
-      <div style={{border: '1px solid #e5e7eb', padding: '5px 8px', marginRight: '1px', backgroundColor: 'white', borderRadius: '3px 0 0 3px', fontWeight: 'bold', color: '#666'}} title="Bold">B</div>
-      <div style={{border: '1px solid #e5e7eb', padding: '5px 8px', marginRight: '1px', backgroundColor: 'white', fontStyle: 'italic', color: '#666'}} title="Italic">I</div>
-      <div style={{border: '1px solid #e5e7eb', padding: '5px 8px', backgroundColor: 'white', borderRadius: '0 3px 3px 0', textDecoration: 'underline', color: '#666'}} title="Underline">U</div>
-    </div>
-    <div style={{display: 'flex', alignItems: 'center', marginRight: '16px'}}>
-      <div style={{border: '1px solid #e5e7eb', padding: '5px 8px', marginRight: '1px', backgroundColor: 'white', borderRadius: '3px 0 0 3px', textDecoration: 'underline', color: '#666', display: 'flex', alignItems: 'center', gap: '3px'}} title="Text Color">
-        <span>A</span>
-        <span style={{fontSize: '10px', marginTop: '3px'}}>▼</span>
+    
+    <div className="diagram-container">
+      <div className="diagram-component excel">
+        <div className="component-header">
+          <img src={ExcelLogo.src} alt="Excel Logo" className="component-logo" />
+          <div className="component-title">Excel</div>
+        </div>
+        <div className="component-desc">Explore your data and perform preliminary calculations with the familiar interface of an open-source Excel equivalent</div>
       </div>
-      <div style={{border: '1px solid #e5e7eb', padding: '5px 8px', backgroundColor: 'white', borderRadius: '0 3px 3px 0', color: '#666', display: 'flex', alignItems: 'center', gap: '3px'}} title="Highlight Color">
-        <span>⬚</span>
-        <span style={{fontSize: '10px', marginTop: '2px'}}>▼</span>
+
+      <div className="diagram-component illustrator">
+        <div className="component-header">
+          <img src={IllustratorLogo.src} alt="Illustrator Logo" className="component-logo illustrator-logo" />
+          <div className="component-title">Illustrator</div>
+        </div>
+        <div className="component-desc">View all code-generated figures as SVGs in an open-source graphic design canvas to make final manual stylistic edits</div>
       </div>
-    </div>
-    <div style={{display: 'flex', alignItems: 'center', marginRight: '16px'}}>
-      <div style={{border: '1px solid #e5e7eb', padding: '5px 8px', marginRight: '4px', backgroundColor: 'white', borderRadius: '3px', color: '#666'}} title="Insert Table">▦</div>
-      <div style={{border: '1px solid #e5e7eb', padding: '5px 8px', backgroundColor: 'white', borderRadius: '3px', color: '#666'}} title="Insert Chart">📊</div>
-    </div>
-    <div style={{display: 'flex', alignItems: 'center', marginRight: '16px'}}>
-      <div style={{border: '1px solid #e5e7eb', padding: '5px 8px', marginRight: '1px', backgroundColor: 'white', borderRadius: '3px 0 0 3px', textAlign: 'center', color: '#666'}} title="Align Left">≡</div>
-      <div style={{border: '1px solid #e5e7eb', padding: '5px 8px', marginRight: '1px', backgroundColor: 'white', textAlign: 'center', color: '#666'}} title="Align Center">☰</div>
-      <div style={{border: '1px solid #e5e7eb', padding: '5px 8px', backgroundColor: 'white', borderRadius: '0 3px 3px 0', textAlign: 'center', color: '#666'}} title="Align Right">≡</div>
-    </div>
-    <div style={{display: 'flex', alignItems: 'center'}}>
-      <div style={{border: '1px solid #e5e7eb', padding: '5px 8px', marginRight: '4px', backgroundColor: 'white', borderRadius: '3px', color: '#666'}} title="Line Spacing">≣</div>
-      <div style={{border: '1px solid #e5e7eb', padding: '5px 8px', backgroundColor: 'white', borderRadius: '3px', color: '#666', display: 'flex', alignItems: 'center', gap: '3px'}} title="Text Style">
-        <span>A</span>
-        <span style={{fontSize: '10px'}}>▼</span>
+
+      <div className="diagram-component vscode">
+        <div className="component-header">
+          <img src={FigureShopLogo.src} alt="FigureShop Logo" className="component-logo figureshop-logo" />
+        </div>
+        <div className="component-desc">Spreadsheets turned into code turned into beautiful figures, guided by an AI agent. Embedded in a VSCode-based environment.</div>
       </div>
-    </div>
-  </div>
-  <div style={{display: 'flex', backgroundColor: 'white', padding: '6px 0', borderBottom: '1px solid #e5e7eb'}}>
-    <div style={{border: '1px solid #e5e7eb', width: '60px', textAlign: 'center', padding: '4px', marginLeft: '12px', fontSize: '13px', borderRadius: '3px', color: '#444'}}>D14</div>
-    <div style={{border: '1px solid #e5e7eb', width: 'calc(100% - 100px)', padding: '4px 10px', marginLeft: '12px', fontSize: '13px', fontFamily: 'Consolas, monospace', borderRadius: '3px', color: '#107c41'}}>
-      =AVERAGE(D2:D13)
+
+      <div className="diagram-component github">
+        <div className="component-header">
+          <img src={GithubLogo.src} alt="Github Logo" className="component-logo github-logo" />
+          <div className="component-title">Github Library</div>
+        </div>
+        <div className="component-desc">Browse the largest code repository of analytical methods, shared by labs across the world. We also add custom figure theme kits.</div>
+      </div>
+
+      <div className="diagram-component claude">
+        <div className="component-header">
+          <img src={VSCodeLogo.src} alt="Visual Studio Code Logo" className="component-logo vscode-logo" />
+          <div className="component-title">Visual Studio Code</div>
+        </div>
+        <div className="component-desc">Gold-standard open-source software<br />development kit supporting most programming languages</div>
+      </div>
     </div>
   </div>
 </div>
 
-| | A | B | C | D | E | F | G | H | I | J |
-|---|---|---|---|---|---|---|---|---|---|---|
-| 1 | **Cell Line** | **Cancer Type** | **Control** | **Drug A** | **Drug B** | **Drug C** | **Drug A+B** | **Drug A+C** | **Drug B+C** | **Triple Therapy** |
-| 2 | MCF-7 | Breast | 100.0 | 78.3 | 65.2 | 83.1 | 45.7 | 62.4 | 55.9 | 32.8 |
-| 3 | MDA-MB-231 | Breast | 100.0 | 85.7 | 72.1 | 79.8 | 59.2 | 67.5 | 63.4 | 41.2 |
-| 4 | PC-3 | Prostate | 100.0 | 82.3 | 68.5 | 75.2 | 52.1 | 60.3 | 58.7 | 38.5 |
-| 5 | DU145 | Prostate | 100.0 | 79.8 | 74.2 | 81.5 | 58.7 | 65.2 | 61.9 | 43.7 |
-| 6 | A549 | Lung | 100.0 | 68.5 | 59.3 | 72.4 | 38.2 | 52.1 | 45.8 | 29.2 |
-| 7 | H460 | Lung | 100.0 | 72.1 | 63.8 | 79.5 | 42.5 | 58.7 | 49.2 | 32.5 |
-| 8 | HCT116 | Colorectal | 100.0 | 75.8 | 70.2 | 68.3 | 54.7 | 51.9 | 48.3 | 35.2 |
-| 9 | HT-29 | Colorectal | 100.0 | 81.2 | 75.3 | 72.8 | 61.5 | 57.2 | 53.8 | 40.1 |
-| 10 | PANC-1 | Pancreatic | 100.0 | 92.5 | 88.7 | 90.3 | 79.5 | 82.1 | 80.3 | 68.4 |
-| 11 | BxPC-3 | Pancreatic | 100.0 | 87.3 | 85.2 | 88.9 | 75.8 | 78.2 | 76.5 | 64.9 |
-| 12 | U87MG | Glioblastoma | 100.0 | 76.2 | 69.8 | 74.5 | 55.3 | 57.8 | 52.4 | 41.5 |
-| 13 | T98G | Glioblastoma | 100.0 | 83.5 | 75.7 | 81.2 | 62.8 | 68.3 | 60.5 | 49.7 |
-| 14 | **Average** | **-** | **100.0** | **80.3** | **72.3** | **79.0** | **57.2** | **63.5** | **58.9** | **43.1** |
-
-<div style={{display: 'flex', backgroundColor: '#f8f9fa', borderTop: '1px solid #e5e7eb', padding: '6px 0', marginTop: '15px', fontFamily: 'Segoe UI, Arial, sans-serif'}}>
-  <div style={{backgroundColor: '#107c41', color: 'white', padding: '4px 15px', marginLeft: '8px', borderRadius: '3px 3px 0 0', fontSize: '12px'}}>
-    Sheet1
-  </div>
-  <div style={{backgroundColor: '#e5e7eb', color: '#666', padding: '4px 15px', marginLeft: '3px', borderRadius: '3px 3px 0 0', fontSize: '12px'}}>
-    Sheet2
-  </div>
-  <div style={{backgroundColor: '#e5e7eb', color: '#666', padding: '4px 15px', marginLeft: '3px', borderRadius: '3px 3px 0 0', fontSize: '12px'}}>
-    Sheet3
-  </div>
-  <div style={{flex: 1}}></div>
-  <div style={{display: 'flex', alignItems: 'center', marginRight: '16px', fontSize: '12px', color: '#666'}}>
-    <div style={{marginRight: '10px'}}>100%</div>
-    <div style={{border: '1px solid #e5e7eb', backgroundColor: 'white', padding: '2px 6px', borderRadius: '3px'}}>-</div>
-    <div style={{border: '1px solid #e5e7eb', backgroundColor: 'white', padding: '2px 6px', marginLeft: '3px', borderRadius: '3px'}}>+</div>
-  </div>
-</div>
+<style dangerouslySetInnerHTML={{ __html: `
+  .integration-diagram {
+    padding: 100px 20px;
+    background: #ffffff;
+    text-align: center;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  .text-content {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto 80px;
+    text-align: center;
+  }
+  
+  .heading {
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #222;
+    line-height: 1.3;
+    text-align: center;
+  }
+  
+  .subtitle {
+    font-size: 1.3rem;
+    color: #555;
+    line-height: 1.6;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .buttons-container {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    margin-bottom: 40px;
+  }
+  
+  .action-button {
+    padding: 12px 36px;
+    font-size: 1rem;
+    font-weight: 500;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: none;
+    outline: none;
+    letter-spacing: 0.5px;
+    box-shadow: 0 2px 6px rgba(109, 119, 255, 0.1);
+  }
+  
+  .waitlist-button {
+    background-color: #6D77FF;
+    color: white;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .waitlist-button:hover {
+    background-color: #5B66FF;
+    box-shadow: 0 6px 12px rgba(109, 119, 255, 0.25);
+    transform: translateY(-2px);
+  }
+  
+  .contact-button {
+    background-color: white;
+    color: #6D77FF;
+    border: 1px solid #6D77FF;
+  }
+  
+  .contact-button:hover {
+    background-color: rgba(109, 119, 255, 0.05);
+    box-shadow: 0 6px 12px rgba(109, 119, 255, 0.12);
+    transform: translateY(-2px);
+  }
+  
+  .accent {
+    color: #5271ff;
+    font-weight: 600;
+  }
+  
+  .diagram-container {
+    position: relative;
+    max-width: 1100px;
+    margin: 0 auto;
+    height: 550px;
+    padding: 0 10px;
+    box-sizing: border-box;
+  }
+  
+  .diagram-component {
+    position: absolute;
+    text-align: center;
+    padding: 20px;
+    border-radius: 16px;
+    background-color: white;
+    border: 2px solid #eaeaea;
+    min-width: 220px;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  }
+  
+  .excel, .illustrator, .github, .claude {
+    border: 2px solid #aaaaaa;
+    box-shadow: none;
+    z-index: 5;
+  }
+  
+  /* Fixed positions for better spacing - Left side components */
+  .excel, .github {
+    left: 8%;
+    max-width: 35%;
+  }
+  
+  /* Fixed positions for better spacing - Right side components */
+  .illustrator, .claude {
+    right: 8%;
+    max-width: 35%;
+  }
+  
+  /* Excel component styling */
+  .excel {
+    top: 12%;
+    transform: translateY(-50%);
+  }
+  
+  /* Illustrator component styling */
+  .illustrator {
+    top: 12%;
+    transform: translateY(-50%);
+  }
+  
+  /* Github component styling */
+  .github {
+    bottom: 12%;
+    transform: translateY(50%);
+  }
+  
+  /* Claude component styling */
+  .claude {
+    bottom: 12%;
+    transform: translateY(50%);
+    border: none;
+    box-shadow: none;
+  }
+  
+  /* Connection lines */
+  .diagram-component:after {
+    content: '';
+    position: absolute;
+    background: #333;
+    z-index: 1;
+  }
+  
+  .component-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+  
+  .component-logo {
+    width: 45px;
+    height: auto;
+    margin-right: 12px;
+    display: flex;
+    align-self: center;
+  }
+  
+  .illustrator-logo {
+    width: 38px;
+  }
+  
+  .component-title {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 0;
+    line-height: 1;
+    display: flex;
+    align-self: center;
+  }
+  
+  .component-desc {
+    font-size: 0.95rem;
+    color: #555;
+    line-height: 1.5;
+    max-width: 350px;
+    margin: 0 auto;
+  }
+  
+  .release-date {
+    font-size: 0.85rem;
+    color: #5271ff;
+    font-weight: 500;
+  }
+  
+  /* VSCode component styling */
+  .vscode {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 55%;
+    max-width: 650px;
+    border-radius: 25px;
+    padding: 40px 30px;
+    box-sizing: border-box;
+    background: white;
+    z-index: 10;
+    position: relative;
+    border: none;
+    text-align: center;
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.08);
+  }
+  
+  .vscode .component-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  .vscode .component-desc {
+    max-width: none;
+    width: 100%;
+    text-align: center;
+    font-size: 1.1rem;
+  }
+  
+  .vscode:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 25px;
+    background: white;
+    z-index: -1;
+  }
+  
+  .vscode:after {
+    content: '';
+    position: absolute;
+    top: -4px;
+    left: -4px;
+    right: -4px;
+    bottom: -4px;
+    border-radius: 27px;
+    background: linear-gradient(45deg, #ff6bc1, #5271ff, #ff6bc1, #5271ff);
+    background-size: 300% 300%;
+    animation: gradientBorder 6s ease infinite;
+    z-index: -2;
+  }
+  
+  /* Claude white background */
+  .claude:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 16px;
+    background: white;
+    z-index: -1;
+  }
+  
+  /* Claude component border */
+  .claude:after {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    border-radius: 18px;
+    border: 2px solid #aaaaaa;
+    z-index: -2;
+  }
+  
+  /* Add animation for VSCode border */
+  @keyframes gradientBorder {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
+  /* Add responsive styles for the diagram */
+  @media (max-width: 1200px) {
+    .diagram-container {
+      height: 600px;
+    }
+    
+    .vscode {
+      width: 52%;
+      max-width: 600px;
+    }
+    
+    .excel, .github {
+      left: 6%;
+      max-width: 32%;
+    }
+    
+    .illustrator, .claude {
+      right: 6%;
+      max-width: 32%;
+    }
+    
+    .excel {
+      top: 9%;
+    }
+    
+    .illustrator {
+      top: 9%;
+    }
+    
+    .github {
+      bottom: 9%;
+    }
+    
+    .claude {
+      bottom: 9%;
+    }
+  }
+  
+  @media (max-width: 1000px) {
+    .diagram-container {
+      height: 650px;
+    }
+    
+    .vscode {
+      width: 50%;
+      max-width: 550px;
+      padding: 30px 25px;
+    }
+    
+    .excel, .illustrator, .github, .claude {
+      padding: 15px;
+    }
+    
+    .excel, .github {
+      left: 3%;
+      max-width: 40%;
+    }
+    
+    .illustrator, .claude {
+      right: 3%;
+      max-width: 40%;
+    }
+    
+    .excel {
+      top: 6%;
+    }
+    
+    .illustrator {
+      top: 6%;
+    }
+    
+    .github {
+      bottom: 6%;
+    }
+    
+    .claude {
+      bottom: 6%;
+    }
+    
+    .component-desc {
+      font-size: 0.85rem;
+      line-height: 1.4;
+    }
+  }
+  
+  @media (max-width: 900px) {
+    .diagram-container {
+      height: 700px;
+    }
+    
+    .excel, .illustrator, .github, .claude {
+      padding: 15px;
+      min-width: auto;
+    }
+    
+    .excel, .github {
+      left: 2%;
+      max-width: 210px;
+    }
+    
+    .illustrator, .claude {
+      right: 2%;
+      max-width: 210px;
+    }
+    
+    .excel {
+      top: 3%;
+    }
+    
+    .illustrator {
+      top: 3%;
+    }
+    
+    .github {
+      bottom: 3%;
+    }
+    
+    .claude {
+      bottom: 3%;
+    }
+    
+    .vscode {
+      width: 75%;
+      max-width: 500px;
+      padding: 30px 20px;
+    }
+    
+    .component-title {
+      font-size: 1.5rem;
+    }
+    
+    .component-desc {
+      font-size: 0.8rem;
+      line-height: 1.3;
+    }
+  }
+  
+  @media (max-width: 650px) {
+    .diagram-container {
+      height: auto;
+      padding-top: 30px;
+      padding-bottom: 30px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
+    
+    .diagram-component {
+      position: relative;
+      top: auto;
+      left: auto;
+      right: auto;
+      bottom: auto;
+      transform: none;
+      width: 90%;
+      max-width: 350px;
+      margin-bottom: 0;
+    }
+    
+    .vscode {
+      order: 3;
+      transform: none;
+      width: 90%;
+      max-width: 400px;
+    }
+    
+    .excel {
+      order: 1;
+    }
+    
+    .illustrator {
+      order: 2;
+    }
+    
+    .github {
+      order: 4;
+    }
+    
+    .claude {
+      order: 5;
+    }
+  }
+  
+  .github-logo {
+    width: 35px;
+  }
+  
+  .vscode-logo {
+    width: 36px;
+  }
+  
+  .claude-logo {
+    width: 38px;
+  }
+  
+  .figureshop-logo {
+    width: 240px;
+    height: auto;
+    margin: 0 auto 10px;
+  }
+` }} />

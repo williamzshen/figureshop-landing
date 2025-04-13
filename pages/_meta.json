@@ -1,8 +1,18 @@
 {
-  "index": "Introduction",
+  "index": {
+    "title": "Welcome",
+    "display": "normal",
+    "theme": {
+      "breadcrumb": false,
+      "footer": true,
+      "sidebar": true,
+      "toc": false,
+      "pagination": false
+    }
+  },
   "introduction": "Project 1",
   "another": "Another Page",
-  "advanced": "Advanced (A Folder)",
+  "advanced": "Project 2",
   "about": {
     "title": "About",
     "type": "page"
